@@ -1,13 +1,13 @@
 <template>
-  <div>
-    <entete />
+  <div class="contact">
     <header>
-      <div class="conteneur">
+      <entete />
+      <div class="container">
         <h1>Contactez-nous</h1>
       </div>
     </header>
     <main>
-      <div class="conteneur">
+      <div class="container texte max-width-1250">
         <h2>Titre h2</h2>
       </div>
     </main>

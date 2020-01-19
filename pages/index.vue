@@ -1,31 +1,53 @@
 <template>
   <div class="accueil">
-    <entete />
     <header class="header-accueil">
-      <div class="conteneur">
-        <h1>À l'Érablière St-Germain, on sait recevoir!</h1>
+      <entete />
+      <div class="container header-container-accueil">
+        <h1 class="h1-container-accueil">À l'Érablière St-Germain, on sait recevoir!</h1>
         <p>L'érablière est situé dans un milieu consectetur adipisicing elit. Quod sint est enim excepturi exercitationem natus vero possimus amet harum, quaerat officia cumque quibusdam assumenda quas fugiat explicabo facere ipsa nostrum!</p>
-        <p><a class="bouton bouton-page decouvrez" href="#">Découvrez notre menu</a></p>
+        <p><a class="bouton bouton-entete decouvrez" href="#">Découvrez notre menu</a></p>
       </div>
     </header>
     <main>
       <article>
-        <div class="conteneur accueil">
+        <div class="container accueil">
           <h2>Un lieu de rassemblement</h2>
           <p>L'érablière est situé dans un milieu sit amet consectetur adipisicing elit. Cumque, laudantium! Modi praesentium, recusandae eligendi omnis ex architecto, vitae deserunt sapiente esse molestias error nemo quaerat enim rerum tempora sint veniam. Cum, obcaecati, delectus repellat atque in at sint deleniti itaque, odio dolore incidunt. Quam necessitatibus facere vero eius qui deleniti!</p>
-          <p><a href="#">En savoir plus</a></p>
-          <ul>
+          <p><a class="bouton bouton-main" href="#">En savoir plus</a></p>
+        </div>
+        <div class="container photos">
+
+          <ul class="galerie">
             <li>
-              <a href="#">Cabane à sucre</a>
+              <a href="#">
+                <figure>
+                  <img src="../static/Dimensions_finales/Galerie_Depositphotos_95217842_xl-2015.png" alt="Tire sur la neige" />
+                  <figcaption>
+                    <span>
+                      Cabane à sucre
+                    </span>
+                  </figcaption>
+                </figure>
+              </a>
             </li>
             <li>
-              <a href="#">Réservation de la salle</a>
+              <a href="#">
+                <figure>
+                  <img src="../static/Dimensions_finales/Galerie_Depositphotos_105674408_xl-2015.png" alt="Toast" />
+                  <figcaption>
+                    <span>
+                      Réservation de la salle
+                    </span>
+                  </figcaption>
+                </figure>
+              </a>
             </li>
           </ul>
+
         </div>
       </article>
       <section class="contact clearfix">
-        <div class="conteneur">
+        <div class="container">
           <div class="colgauche">
             <h2>Contactez-nous</h2>
             <address>
@@ -37,12 +59,12 @@
               <strong>Pour toutes questions :</strong><br>
               <a href="mailto:info@erablierestgermain.ca">info@erablierestgermain.ca</a>
             </address>
-            <div class="reseaux-sociaux" aria-label="Réseaux sociaux">
+            <div class="reseaux-sociaux">
               <a href="#"><img src="../static/Dimensions_finales/Icone_Facebook.png" alt="Facebook"></a>
               <a href="#"><img src="../static/Dimensions_finales/Icone_Insta.png" alt="Instagram"></a>
             </div>
           </div>
-          <div class="coldroite googlemap">
+          <div id="map" class="coldroite googlemap">
             <p>Carte</p>
           </div>
         </div>
@@ -66,6 +88,103 @@ export default {
 </script>
 
 <style>
+
+.pb200 {
+  padding-bottom: 200px !important;
+}
+
+.container.max-width-1200 {
+  max-width: 1200px !important;
+  margin: 0 auto;
+  padding-top: 45px;
+}
+
+.container.max-width-1250 {
+  max-width: 1250px !important;
+  margin: 0 auto;
+  padding-bottom: 135px;
+}
+
+.container.max-width-1250.texte {
+  padding-bottom: 200px;
+}
+
+.cabane .container.max-width-1250.texte {
+  padding-bottom: 100px;
+}
+
+.container.max-width-1250 {
+  max-width: 1250px !important;
+  margin: 0 auto;
+}
+
+.container.max-width-1250 h2 {
+  margin: 110px 0 30px 25px;
+  max-width: 780px;
+}
+
+.container.max-width-1250 p {
+  max-width: 1020px !important;
+  margin-right: 25px;
+  margin-left: 25px;
+  color: #D7944B;
+}
+
+.container.max-width-1250 img {
+  width: 100%;
+  margin-top: -135px;
+}
+
+.photos-page {
+  background: url("../static/Dimensions_finales/Bloc_texture_background_galerie-photos.png");
+}
+
+main article {
+  text-align: center;
+  color: #D7944B;
+}
+
+main article a {
+  color: #D7944B !important;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+main p {
+  font-size: 24px;
+}
+
+header {
+  color: white;
+}
+
+header:not(.header-accueil)  {
+  height: 599px
+}
+
+header nav {
+  background: transparent;
+}
+
+.accueil header > .container:not(.header-container-accueil) {
+    padding: 0;
+}
+
+header h1:not(.h1-container-accueil) {
+ font-size: 70px;
+ font-weight: 800;
+ padding-top: 140px;
+ text-align: center;
+ margin: 0;
+}
+
+header h1.h1-container-accueil {
+ font-size: 70px;
+ font-weight: 800;
+ line-height: 1.1;
+ text-align: center;
+}
+
 h2 {
   font-size: 40px;
   font-weight: 800;
@@ -73,71 +192,160 @@ h2 {
   margin-bottom: 40px;
 }
 
-main article {
-  text-align: center;
-}
-
-main p {
-  font-size: 24px;
-}
-
-.conteneur {
-  max-width: 1440px;
-  min-width: 1100px;
-  padding: 50px 30px;
-  margin: 0 auto;
-  position: relative;
-}
-
-header {
-  background: #CCCCCC;
-  color: white;
-}
-
 .accueil header {
   background: url("../static/Dimensions_finales/Photos_Header_Accueil_filtre.png");
-  padding: 100px 0 170px 0;
+}
+
+.cabane header {
+  background: url("../static/Dimensions_finales/Photos_Header_Cabane-a-sucre_filtre.png");
+}
+
+.contact header {
+  background: url("../static/Dimensions_finales/Photos_Header_Cabane-a-sucre_filtre.png");
+}
+
+.groupes header {
+  background: url("../static/Dimensions_finales/Photos_Header_Cabane-a-sucre_filtre.png");
+}
+
+.histoire header {
+  background: url("../static/Dimensions_finales/Photos_Header_Cabane-a-sucre_filtre.png");
+}
+
+.accueil header > .container {
+    padding: 120px 0 223px 0;
 }
 
 .accueil header h1 {
- font-size: 70px;
- font-weight: 800;
- max-width: 1050px;
- margin-bottom: 24px;
- line-height: 1.1
+  text-align: left;
+  max-width: 1050px;
+  margin-bottom: 36px;
 }
 
 .accueil header p {
  font-size: 24px;
  max-width: 1050px;
- margin-bottom: 38px;
+ margin-bottom: 36px;
  line-height: 1.4;
 }
 
-.accueil main article .conteneur {
-  background: url(/_nuxt/static/Dimensions_finales/Bloc_texture_Accueil.png);
-  min-width: auto;
-  margin: 0 auto;
+.accueil main article .container.accueil {
+  background: url("../static/Dimensions_finales/Bloc_texture_Accueil.png");
   border-top: 10px solid #FBB255;
-  margin-top: -120px;
-  width: 1385px;
-  padding: 85px;
+  margin-top: -130px;
+  padding: 110px 0 245px 0;
 }
 
-.accueil header .bouton {
+.accueil main article .container p {
+  width: 70%;
+  margin: 0 auto 50px auto;
+}
 
-    background: #FBB255
-;
-    color: white;
-    height: 60px;
-    line-height: 60px;
-    padding: 0 30px;
+.galerie {
+  padding: 0;
+  margin: -245px 0 80px 0;
+  list-style: none;
+}
+
+.galerie li {
+  display: inline-block;
+  position: relative;
+  margin-right: 48px;
+}
+
+.galerie li:nth-last-child(1) {
+  margin-right: 0;
+}
+
+.galerie a {
+  text-decoration: none !important;
+}
+
+.galerie li figure {
+  position: relative;
+  height: 492px;
+  width: 100%;
+}
+
+.galerie li img {
+  transition: all .3s ease-in-out;
+}
+
+.galerie li figure figcaption {
+  position: relative;
+  height: 445px;
+  width: 91.6%;
+  bottom: 470px;
+  margin-bottom: -470px;
+  left: 25px;
+  background: rgb(124, 76, 15, 0);
+  transition: all .3s ease-in-out;
+}
+
+.galerie li figure figcaption:hover {
+  background: rgb(124, 76, 15, .7);
+}
+
+.galerie li figure figcaption span {
+  position: absolute;
+  top: 155px;
+  left: 108px;
+  background: rgb(124, 76, 15, .7);
+  color: white;
+  font-family: 'Hepta Slab', serif;
+  font-size: 30px;
+  width: 337px;
+  line-height: 1.3;
+  padding: 24px 55px;
+  transition: all .1s;
+}
+
+.galerie li figure figcaption:hover span {
+  background: rgb(124, 76, 15, 0);
+}
+
+@media (max-width: 1273px) {
+
+  .galerie li {
     display: inline-block;
-    border-radius: 30px;
-    text-transform: uppercase;
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none !important;
+    position: relative;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .galerie li figure figcaption {
+    height: 91.5%;
+    width: 91.59%;
+    bottom: 96.3%;
+    margin-bottom: -96.3%;
+    left: 4.3%;
+  }
+
+}
+
+@media (max-width: 630px) {
+
+  .galerie li img {
+    width: 483px;
+    height: 401.281px;
+  }
+
+  .galerie li figure {
+    height: 401.281px;
+  }
+
+  .galerie li figure figcaption {
+    height: 90.35%;
+    width: 91.59%;
+    bottom: 95.3%;
+    margin-bottom: 91.59%;
+    left: 4.3%;
+  }
+
+  .galerie li figure figcaption span {
+    top: 119px;
+    left: 54px;
+  }
 
 }
 
