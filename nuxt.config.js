@@ -1,4 +1,6 @@
 
+const webpack = require('webpack')
+
 export default {
   mode: 'universal',
   /*
@@ -64,6 +66,12 @@ export default {
     /*
     ** You can extend webpack config here
     */
+    vendor: ['jquery'],
+    plugins: [
+      new webpack.ProvidePlugin({
+        '$': 'jquery'
+      })
+    ],
     extend (config, ctx) {
     }
   }

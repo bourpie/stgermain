@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark">
+  <nav id="nav" class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
       <nuxt-link class="logo" to="/">
         <img src="../static/Dimensions_finales/Erabliere_St-Germain_logo_RENVERSE-1.png" alt="Logo de l'érablière St-Germain">
@@ -26,6 +26,28 @@
     </div>
   </nav>
 </template>
+
+<script>
+
+import $ from 'jquery'
+
+export default {
+  mounted () {
+    $(function () {
+      let path = window.location.pathname
+      path = path.replace(/\/$/, '')
+      path = decodeURIComponent(path)
+
+      $('.navbar a').each(function () {
+        const href = $(this).attr('href')
+        if (path.substring(0, href.length) === href) {
+          $(this).closest('li').addClass('active')
+        }
+      })
+    })
+  }
+}
+</script>
 
 <style>
 
@@ -66,7 +88,8 @@ nav.navbar-dark ul.navbar-nav li a.nav-link {
   padding: 3px 26px !important;
 }
 
-nav.navbar-dark ul.navbar-nav li a.nav-link:hover {
+nav.navbar-dark ul.navbar-nav li a.nav-link:hover,
+nav.navbar-dark ul.navbar-nav li.active a.nav-link {
     color: #D7944B;
 }
 
@@ -104,7 +127,6 @@ nav.navbar-dark ul.navbar-nav li:nth-last-child(2) a.nav-link {
   margin-bottom: 40px;
 }
 
-/* Small devices (landscape phones, max 576px) */
 @media (max-width: 993px) {
 
   nav {

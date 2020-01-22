@@ -227,6 +227,7 @@ h2 {
  max-width: 1050px;
  margin-bottom: 36px;
  line-height: 1.4;
+ color: white;
 }
 
 .accueil main article .container.accueil {
@@ -304,6 +305,13 @@ h2 {
   background: rgb(124, 76, 15, 0);
 }
 
+@media (max-width: 1690px) {
+  .accueil header > .container {
+      padding-left: 20px;
+      padding-right: 20px;
+  }
+}
+
 @media (max-width: 1273px) {
 
   .galerie li {
@@ -324,6 +332,27 @@ h2 {
 }
 
 @media (max-width: 630px) {
+
+  header h1 {
+    font-size: 34px !important;
+    text-align: center !important;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .accueil header p {
+    text-align: center;
+    font-size: 24px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .accueil header .bouton {
+    font-size: 18px;
+  }
 
   .galerie li img {
     width: 483px;
