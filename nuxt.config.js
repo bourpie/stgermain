@@ -16,7 +16,8 @@ export default {
     script: [
       { src: 'https://code.jquery.com/jquery-3.4.1.slim.min.js'},
       { src: 'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'},
-      { src: 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js' }
+      { src: 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js' },
+      { src: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyA1EKqoG1d6VF-2xtphWdL6oExLXneqIm4&callback=initMap' }
     ],    
     link: [
       { rel: 'stylesheet', href: 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' },

@@ -46,26 +46,33 @@
 
         </div>
       </article>
-      <section class="contact clearfix">
-        <div class="container">
-          <div class="colgauche">
-            <h2>Contactez-nous</h2>
-            <address>
-              <strong>Érablière St-Germain</strong><br>
-              562 Chemain Doherty, L'Ange-Gardien<br>
-              (Québec) J8L 0T4<br>
-              <a class="telephone" href="tel:+13115552368">(311) 555-2368</a>
+      <section class="contact">
+        <div class="container max-width-1220 contactez-nous">
+          <div class="row">
+            <div class="col-md-6">
+              <h2>Contactez-nous</h2>
+              <address>
 
-              <strong>Pour toutes questions :</strong><br>
-              <a href="mailto:info@erablierestgermain.ca">info@erablierestgermain.ca</a>
-            </address>
-            <div class="reseaux-sociaux">
-              <a href="#"><img src="../static/Dimensions_finales/Icone_Facebook.png" alt="Facebook"></a>
-              <a href="#"><img src="../static/Dimensions_finales/Icone_Insta.png" alt="Instagram"></a>
+                <strong class="titre">Érablière St-Germain</strong>
+
+                562 Chemain Doherty, L'Ange-Gardien<br>
+                (Québec) J8L 0T4
+
+                <strong class="telephone">
+                  <a class="telephone" href="tel:+13115552368">(311) 555-2368</a>
+                </strong>
+
+                <strong class="titre">Pour toutes questions :</strong>
+                <a href="mailto:info@erablierestgermain.ca">info@erablierestgermain.ca</a>
+              </address>
+              <div class="reseaux-sociaux">
+                <a href="#"><img src="../static/Dimensions_finales/Icone_Facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="../static/Dimensions_finales/Icone_Insta.png" alt="Instagram"></a>
+              </div>
             </div>
-          </div>
-          <div id="map" class="coldroite googlemap">
-            <p>Carte</p>
+            <div id="map" class="col-md-6 googlemap">
+              <p>Carte</p>
+            </div>
           </div>
         </div>
       </section>
@@ -99,6 +106,10 @@ export default {
   padding-top: 45px;
 }
 
+.container.max-width-1220 {
+  max-width: 1220px !important;
+}
+
 .container.max-width-1250 {
   max-width: 1250px !important;
   margin: 0 auto;
@@ -120,7 +131,7 @@ export default {
 
 .container.max-width-1250 h2 {
   margin: 110px 0 30px 25px;
-  max-width: 780px;
+  max-width: 815px;
 }
 
 .container.max-width-1250 p {
@@ -201,15 +212,15 @@ h2 {
 }
 
 .contact header {
-  background: url("../static/Dimensions_finales/Photos_Header_Cabane-a-sucre_filtre.png");
+  background: url("../static/Dimensions_finales/Photos_Header_Contact_filtre.png");
 }
 
 .groupes header {
-  background: url("../static/Dimensions_finales/Photos_Header_Cabane-a-sucre_filtre.png");
+  background: url("../static/Dimensions_finales/Photos_Header_Groupe_et_evenements_filtre.png");
 }
 
 .histoire header {
-  background: url("../static/Dimensions_finales/Photos_Header_Cabane-a-sucre_filtre.png");
+  background: url("../static/Dimensions_finales/Photos_Header_Notre_histoire_filtre.png");
 }
 
 .accueil header > .container {
@@ -303,6 +314,32 @@ h2 {
 
 .galerie li figure figcaption:hover span {
   background: rgb(124, 76, 15, 0);
+}
+
+.contactez-nous {
+  padding-bottom: 60px;
+}
+
+.contactez-nous h2 {
+  margin-bottom: 18px;
+}
+
+.contactez-nous address {
+  color: #D7944B;
+  font-size: 18px;
+}
+.contactez-nous address a {
+  color: #D7944B;
+  text-decoration: none !important;
+}
+
+.contactez-nous strong {
+  display: block;
+}
+
+.contactez-nous strong.telephone {
+  font-size: 24px;
+  margin: 24px 0;
 }
 
 @media (max-width: 1690px) {
