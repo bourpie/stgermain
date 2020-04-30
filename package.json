@@ -16,7 +16,7 @@
     "@nuxtjs/pwa": "^3.0.0-0",
     "@popperjs/core": "^2.0.0",
     "bootstrap": "^4.4.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "nuxt": "^2.0.0",
     "popper.js": "^1.16.1",
     "vue-jquery": "^1.0.6"
